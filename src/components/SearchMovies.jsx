@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MovieCard from "./MovieCard";
 
 function SearchMovies() {
   const [query, setQuery] = useState("");
@@ -38,15 +39,11 @@ function SearchMovies() {
       </form>
 
       <div className="card-list">
-        {movies.map((movie) => (
-          <div className="card" key={movie.id}>
-            <img
-              className="card--image"
-              src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`}
-              alt={movie.title + " poster"}
-            />
-          </div>
-        ))}
+        {movies
+          .filter((movie) => movie.poster_path)
+          .map((movie) => (
+            <MovieCard movie={movie} key={movie.id} />
+          ))}
       </div>
     </div>
   );

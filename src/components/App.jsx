@@ -1,17 +1,11 @@
 import React from "react";
 import SearchMovies from "./SearchMovies";
 
-
 function App() {
   return (
     <div className="container">
-      
-<h1>Movie Search</h1>
-
-
-<SearchMovies />
-
-      
+      <h1>Movie Search</h1>
+      <SearchMovies />
     </div>
   );
 }
