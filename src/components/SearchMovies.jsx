@@ -21,12 +21,13 @@ function SearchMovies() {
 
   return (
     <div>
+    
       <form className="form" onSubmit={searchMovies}>
         <input
           className="input"
           type="text"
           name="query"
-          placeholder="Type your movie here..."
+          placeholder="Search..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />

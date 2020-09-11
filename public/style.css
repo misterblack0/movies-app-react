@@ -82,11 +82,23 @@ body {
 }
 
 .input {
-  font-size: 1.6rem;
-  width: 50rem;
-  padding: 0.5rem 2rem;
-  line-height: 2.8rem;
+  font: inherit;
+  font-size: 2.4rem;
+  font-weight: 700;
+  width: 104rem;
+  line-height: 9.7rem;
+  background-color: transparent;
   border: none;
+  outline: none;
+  color: #fff;
+  text-align:center;
+  border-bottom: 1px solid #c55959;
+}
+
+.input::placeholder {
+  font-size: 1.8rem;
+  font-weight: 900;
+
 }
 
 .button {
@@ -162,21 +174,20 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   width: 100%;
-
+  height: 5rem;
   color: #fff;
   text-decoration: none;
   display: flex;
-  align-content: center;
+  align-items: center;
   padding-left: 3.5rem;
-  padding-bottom: 2.5rem;
 
-  border-left: 0 solid #00ff99;
-  transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+  border-left: 0.5rem solid transparent;
+  transition: all 200ms ease-in-out;
 }
 
 .sidebar__link:hover {
-  padding-left: 0.5rem;
-  border-left: 0.5rem solid #00ff99;
+  color: #c55959;
+  border-left: 0.5rem solid #c55959;
 }
 
 .sidebar__link li {
