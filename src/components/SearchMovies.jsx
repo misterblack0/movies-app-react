@@ -21,7 +21,6 @@ function SearchMovies() {
 
   return (
     <div>
-    
       <form className="form" onSubmit={searchMovies}>
         <input
           className="input"
@@ -31,6 +30,7 @@ function SearchMovies() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
+
         <button className="button" type="submit">
           Search
         </button>
