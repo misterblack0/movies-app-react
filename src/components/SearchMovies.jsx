@@ -20,30 +20,32 @@ function SearchMovies() {
   };
 
   return (
-    <div>
-      <form className="form" onSubmit={searchMovies}>
-        <input
-          className="input"
-          type="text"
-          name="query"
-          placeholder="Search..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+    <main className="main">
+      <div>
+        <form className="form" onSubmit={searchMovies}>
+          <input
+            className="input"
+            type="text"
+            name="query"
+            placeholder="Search..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
 
-        <button className="button" type="submit">
-          Search
-        </button>
-      </form>
+          <button className="button" type="submit">
+            Search
+          </button>
+        </form>
 
-      <div className="card-list">
-        {movies
-          .filter((movie) => movie.poster_path)
-          .map((movie) => (
-            <MovieCard movie={movie} key={movie.id} />
-          ))}
+        <div className="card-list">
+          {movies
+            .filter((movie) => movie.poster_path)
+            .map((movie) => (
+              <MovieCard movie={movie} key={movie.id} />
+            ))}
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
 

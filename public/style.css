@@ -205,18 +205,12 @@ body {
   background-color: #fff;
   overflow: auto;
 
-
-
-
   scrollbar-width: thin;
 }
-
 
 .sidebar__right--body::-webkit-scrollbar {
   width: 11px;
 }
-
-
 
 .sidebar__right--footer {
   height: 10rem;
