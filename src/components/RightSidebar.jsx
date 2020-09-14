@@ -9,8 +9,8 @@ function RightSidebar() {
   return (
     <aside className="sidebar__right">
       <div className="sidebar__right--header">
-        <NotificationsIcon fontSize="large" />
-        <ChatBubbleIcon fontSize="large" />
+        <NotificationsIcon fontSize="large" className="notifications-icon" />
+        <ChatBubbleIcon fontSize="large" className="chat-icon" />
         <img src="/img/profile_user7.jpg" alt="user"></img>
       </div>
 

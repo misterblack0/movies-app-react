@@ -1,23 +1,71 @@
 import React from "react";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import QueryBuilderIcon from "@material-ui/icons/QueryBuilder";
+import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
+
+
 
 function MovieCard({ movie }) {
   return (
     <div className="card">
-      <img
-        className="card--image"
-        src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`}
-        alt={movie.title + " poster"}
-      />
+      <div className="card__image--container">
+        <img
+          className="card__image"
+          src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
+          alt={movie.title + " poster"}
+        />
 
-      <div className="card--content">
-        <h3 className="card--title">{movie.title}</h3>
+        <div className="card__hoverd">
+          <FavoriteBorderIcon
+            fontSize="large"
+            className="card__icon card__icon--favorite"
+          />
+          <QueryBuilderIcon
+            fontSize="large"
+            className="card__icon card__icon--duration"
+          />
+          <PlayCircleFilledIcon
+            style={{ fontSize: 40 }}
+            className="card__icon--play"
+          />
+
+          <div className="bubble bubble-fill">
+            <div className="bubble__container1">
+              <div>
+                <h3 className="card__title">{movie.title}</h3>
+                <small className="card__genres">Drama, Thriller</small>
+
+                <div>{/* <p>Duration:{{movie.runtime}.toString()}</p> */}</div>
+              </div>
+
+              <p>{movie.overview}</p>
+
+              <div>
+                <p>Director:</p>
+                <p>Stars:</p>
+              </div>
+            </div>
+
+            <div className="bubble__container2">Metacritic</div>
+
+            <div className="bubble__container3">
+              Recommended by:
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="card__content">
+        <h3 className="card__title">{movie.title}</h3>
         <p>
-          <small>RELEASE DATE: {movie.release_date}</small>
+          <small className="card__genres">Drama, Thriller</small>
         </p>
-        <p>
+
+        {/*  <p>
           <small>RATING: {movie.vote_average}</small>
         </p>
-        <p className="card--description">{movie.overview}</p>
+        <p className="card--description">{movie.overview}</p> */}
       </div>
     </div>
   );
