@@ -120,6 +120,8 @@ body {
 
 .main {
   background-color: #363738;
+  overflow-x: hidden; 
+  overflow-y: auto; 
 }
 
 .sidebar__left {
@@ -322,7 +324,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 1.5rem 0.5rem;
-  overflow: auto;
+  
 }
 
 .card {
@@ -404,16 +406,12 @@ body {
 
 .bubble {
   position: absolute;
-
   left: 20.2rem;
-
   width: 40.2rem;
-  position: relative;
   border-radius: 0.5rem;
   padding: 3.05rem;
   box-sizing: border-box;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-
   z-index: 20;
 }
 .bubble:before,
@@ -447,4 +445,42 @@ body {
 .bubble__container1,
 .bubble__container2 {
   border-bottom: 1px solid black;
+}
+
+.bubble__container1 h3 {
+  margin: 0;
+  padding-bottom: 0.3rem;
+}
+
+.bubble__container1--header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__overview,
+.card__cast p,
+.bubble__container2 p,
+.bubble__container3 p {
+  font-weight: 600;
+}
+
+.card__link {
+  text-decoration: none;
+  color: #c55959;
+  font-weight: 700;
+}
+
+.bubble__container2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bubble__container2 div {
+  display: flex;
+  flex-direction: column;
+}
+
+.bubble__container2 div p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
