@@ -120,8 +120,8 @@ body {
 
 .main {
   background-color: #363738;
-  overflow-x: hidden; 
-  overflow-y: auto; 
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .sidebar__left {
@@ -324,7 +324,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 1.5rem 0.5rem;
-  
 }
 
 .card {
@@ -442,8 +441,7 @@ body {
   background: #505050;
 }
 
-.bubble__container1,
-.bubble__container2 {
+.bubble__container1 {
   border-bottom: 1px solid black;
 }
 
@@ -455,12 +453,11 @@ body {
 .bubble__container1--header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .card__overview,
-.card__cast p,
-.bubble__container2 p,
-.bubble__container3 p {
+.bubble__container2 p {
   font-weight: 600;
 }
 
@@ -471,36 +468,20 @@ body {
 }
 
 .bubble__container2 {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.bubble__container2 div {
-  display: flex;
-  flex-direction: column;
-}
-
-.bubble__container2 div p {
-  margin-top: 0.2rem;
-  margin-bottom: 0.2rem;
-}
-
-.bubble__container3 {
-  
-  height: 5rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.bubble__container3 img {
+.bubble__container2 img {
   height: 2.5rem;
   border-radius: 50%;
   padding-left: 0.5rem;
   cursor: pointer;
 }
 
-.bubble__container3 div {
+.bubble__container2 div {
   max-width: 50%;
   display: flex;
   justify-content: space-evenly;
