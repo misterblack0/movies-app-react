@@ -484,3 +484,24 @@ body {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
 }
+
+.bubble__container3 {
+  
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bubble__container3 img {
+  height: 2.5rem;
+  border-radius: 50%;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+.bubble__container3 div {
+  max-width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}

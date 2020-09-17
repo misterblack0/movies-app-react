@@ -68,6 +68,13 @@ function MovieCard({ movie }) {
 
             <div className="bubble__container3">
               <p>Recommended by:</p>
+
+            <div>
+            <img src="/img/profile_user7.jpg" alt="user"></img>
+            <img src="/img/profile_user6.jpg" alt="user"></img>
+            <img src="/img/profile_user5.jpg" alt="user"></img>
+            <img src="/img/profile_user4.jpg" alt="user"></img>
+</div>
             </div>
           </div>
         </div>

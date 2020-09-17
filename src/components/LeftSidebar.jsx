@@ -6,8 +6,6 @@ import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import QueryBuilderIcon from "@material-ui/icons/QueryBuilder";
 
-import Genres from "./Genres";
-
 function LeftSidebar() {
   return (
     <aside className="sidebar__left">
@@ -54,7 +52,6 @@ function LeftSidebar() {
             <QueryBuilderIcon fontSize="large" />
             <li>Watch Later</li>
           </a>
-          <Genres />
         </div>
       </div>
     </aside>
