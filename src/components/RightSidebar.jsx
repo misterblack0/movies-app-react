@@ -4,6 +4,7 @@ import users from "../users-data";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import SearchIcon from "@material-ui/icons/Search";
+import SimpleMenu from "./SimpleMenu";
 
 function RightSidebar() {
   return (
@@ -11,7 +12,7 @@ function RightSidebar() {
       <div className="sidebar__right--header">
         <NotificationsIcon fontSize="large" className="notifications-icon" />
         <ChatBubbleIcon fontSize="large" className="chat-icon" />
-        <img src="/img/profile_user7.jpg" alt="user"></img>
+        <SimpleMenu />
       </div>
 
       <div className="sidebar__right--body">
