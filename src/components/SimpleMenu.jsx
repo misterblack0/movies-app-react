@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
-export default function SimpleMenu() {
+const SimpleMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -36,4 +36,6 @@ export default function SimpleMenu() {
       </Menu>
     </div>
   );
-}
+};
+
+export default SimpleMenu;

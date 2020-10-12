@@ -6,64 +6,62 @@ import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import SearchIcon from "@material-ui/icons/Search";
 import SimpleMenu from "./SimpleMenu";
 
-function RightSidebar() {
-  return (
-    <aside className="sidebar__right">
-      <div className="sidebar__right--header">
-        <NotificationsIcon fontSize="large" className="notifications-icon" />
-        <ChatBubbleIcon fontSize="large" className="chat-icon" />
-        <SimpleMenu />
+const RightSidebar = () => (
+  <aside className="sidebar__right">
+    <div className="sidebar__right--header">
+      <NotificationsIcon fontSize="large" className="notifications-icon" />
+      <ChatBubbleIcon fontSize="large" className="chat-icon" />
+      <SimpleMenu />
+    </div>
+
+    <div className="sidebar__right--body">
+      <div className="heading">
+        <h2>Online</h2>
+        <span className="status online"></span>
       </div>
 
-      <div className="sidebar__right--body">
-        <div className="heading">
-          <h2>Online</h2>
-          <span className="status online"></span>
-        </div>
-
-        <div className="users__container">
-          {users.map((user) => (
-            <User
-              key={user.id}
-              name={user.name}
-              img={user.imgURL}
-              city={user.city}
-            />
-          ))}
-        </div>
-
-        <div className="heading">
-          <h2>Offline</h2>
-          <span className="status offline"></span>
-        </div>
-
-        <div className="users__container offline--container">
-          {users.map((user) => (
-            <User
-              key={user.id}
-              name={user.name}
-              img={user.imgURL}
-              city={user.city}
-            />
-          ))}
-        </div>
+      <div className="users__container">
+        {users.map((user) => (
+          <User
+            key={user.id}
+            name={user.name}
+            img={user.imgURL}
+            city={user.city}
+          />
+        ))}
       </div>
 
-      <div className="sidebar__right--footer">
-        <form className="form--user">
-          <button type="submit">
-            <SearchIcon fontSize="large" />
-          </button>
-          <input
-            className="input--user"
-            type="text"
-            name="user-query"
-            placeholder="Search User"
-          ></input>
-        </form>
+      <div className="heading">
+        <h2>Offline</h2>
+        <span className="status offline"></span>
       </div>
-    </aside>
-  );
-}
+
+      <div className="users__container offline--container">
+        {users.map((user) => (
+          <User
+            key={user.id}
+            name={user.name}
+            img={user.imgURL}
+            city={user.city}
+          />
+        ))}
+      </div>
+    </div>
+
+    <div className="sidebar__right--footer">
+      <form className="form--user">
+        <button type="submit">
+          <SearchIcon fontSize="large" />
+        </button>
+        <input
+          className="input--user"
+          type="text"
+          name="user-query"
+          placeholder="Search User"
+        ></input>
+      </form>
+    </div>
+  </aside>
+);
 
 export default RightSidebar;
