@@ -3,7 +3,7 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
-const SimpleMenu = () => {
+function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -15,7 +15,7 @@ const SimpleMenu = () => {
   };
 
   return (
-    <div>
+    <>
       <Button
         aria-controls="simple-menu"
         aria-haspopup="true"
@@ -34,8 +34,8 @@ const SimpleMenu = () => {
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
-    </div>
+    </>
   );
-};
+}
 
 export default SimpleMenu;
