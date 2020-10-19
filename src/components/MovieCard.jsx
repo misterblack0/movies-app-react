@@ -11,7 +11,6 @@ const MovieCard = ({ movie }) => (
         src={`https://image.tmdb.org/t/p/w154/${movie.poster_path}`}
         alt={movie.title + " poster"}
       />
-
       <div className="card__hoverd">
         <FavoriteBorderIcon
           fontSize="large"
@@ -25,7 +24,7 @@ const MovieCard = ({ movie }) => (
           style={{ fontSize: 40 }}
           className="card__icon--play"
         />
-
+        I
         <div className="bubble bubble-fill">
           <div className="bubble__container1">
             <div className="bubble__container1--header">
@@ -36,7 +35,6 @@ const MovieCard = ({ movie }) => (
 
             <p className="card__overview">{movie.overview}</p>
           </div>
-
           <div className="bubble__container2">
             <p>Recommended by:</p>
 
